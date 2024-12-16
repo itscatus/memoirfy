@@ -58,9 +58,9 @@
       },
       getPhotoUrl() {
         if (this.diary.token) {
-          return `http://127.0.0.1:8090/api/files/${this.diary.collectionId}/${this.diary.id}/${this.diary.image}?token=${this.diary.token}`;
+          return `https://memoirfy.pockethost.io/api/files/${this.diary.collectionId}/${this.diary.id}/${this.diary.image}?token=${this.diary.token}`;
         } else {
-          return `http://127.0.0.1:8090/api/files/${this.diary.collectionId}/${this.diary.id}/${this.diary.image}`;
+          return `https://memoirfy.pockethost.io/api/files/${this.diary.collectionId}/${this.diary.id}/${this.diary.image}`;
         }
       },
     },
