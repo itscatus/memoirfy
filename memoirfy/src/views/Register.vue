@@ -25,7 +25,7 @@
   
   <script>
   import PocketBase from "pocketbase";
-  const pb = new PocketBase("https://memoirfy.pockethost.io/);
+  const pb = new PocketBase("https://memoirfy.pockethost.io/");
   
   export default {
     data() {
