@@ -17,10 +17,24 @@ export async function login(email, password) {
 }
 
 // Fungsi mendapatkan pengguna saat ini
-export function getCurrentUser() {
-  const user = JSON.parse(localStorage.getItem('currentUser'));
-  return user || null;
-}
+export const getCurrentUser = async () => {
+  try {
+    // Dapatkan pengguna yang login dari auth store
+    const user = pb.authStore.model;
+
+    if (!user) {
+      throw new Error("User not logged in");
+    }
+
+    // Fetch data pengguna secara lengkap dari database jika diperlukan
+    const userData = await pb.collection("users").getOne(user.id);
+
+    return userData;
+  } catch (error) {
+    console.error("Failed to fetch user:", error);
+    throw error;
+  }
+};
 
 // Fungsi logout
 export function logout() {

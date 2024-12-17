@@ -34,8 +34,13 @@
       };
     },
     async mounted() {
-      const user = await getCurrentUser();
-      this.userName = user.name;
+      try {
+        const user = await getCurrentUser();
+        this.userName = user.name; // Pastikan field `name` ada di data user Anda
+      } catch (error) {
+        console.error("Failed to load user data:", error.message);
+        this.$router.push("/login"); // Redirect jika pengguna tidak terautentikasi
+      }
     },
   };
   </script>
