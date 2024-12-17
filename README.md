@@ -1,7 +1,7 @@
 # Memoirfy
 Memoirfy is a simple diary web-app that can be accessed through pc and mobile phone using browser. Write and record every moment in your day anytime and anywhere using this app!
 
-`Deployment link: https://memoirfy.vercel.app/`
+Deployment link: https://memoirfy.vercel.app/
 
 Main feature:
 - Registration, Login, Logout
