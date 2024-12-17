@@ -9,6 +9,6 @@ Main feature:
 - Add new Diary Baru that contains date, the diary content, mood, and photo of the day (optional)
 - View and manage the diary list (edit and delete)
    
-The framework used for front-end design is Vite+Vue with Tailwind.css
-This website was deployed using vercel
-The backend was hosted using Pockethost with the framework Pocketbase
+| The framework used for front-end design is Vite+Vue with Tailwind.css
+| This website was deployed using vercel
+| The backend was hosted using Pockethost with the framework Pocketbase
