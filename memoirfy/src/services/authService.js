@@ -9,7 +9,6 @@ export async function login(email, password) {
   try {
     const authData = await pb.collection('users').authWithPassword(email, password);
     localStorage.setItem('token', authData.token);
-    localStorage.setItem('currentUser', JSON.stringify(authData.record)); // Simpan data pengguna
     return authData;
   } catch (error) {
     throw new Error('Login failed: ' + error.message);
@@ -39,7 +38,6 @@ export const getCurrentUser = async () => {
 // Fungsi logout
 export function logout() {
   localStorage.removeItem('token');
-  localStorage.removeItem('currentUser');
   pb.authStore.clear();
 }
 
